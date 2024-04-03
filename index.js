@@ -10,6 +10,8 @@ await sdb.loadData("data", "./measurements.txt", {
   header: false,
 });
 await sdb.renameColumns("data", { column0: "city", column1: "temp" });
+await sdb.logTable("data");
+
 await sdb.summarize("data", {
   values: "temp",
   categories: "city",

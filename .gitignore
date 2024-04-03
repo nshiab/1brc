@@ -1,6 +1,7 @@
 node_modules
 measurements1B.txt
 measurementsSmall.txt
+.tmp
 
 #Maven
 target/
