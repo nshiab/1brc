@@ -1,3 +1,7 @@
+node_modules
+measurements1B.txt
+measurementsSmall.txt
+
 #Maven
 target/
 pom.xml.tag
