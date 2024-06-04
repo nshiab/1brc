@@ -1,7 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "journalism": "^1.0.2",
-    "simple-data-analysis": "^2.10.2"
+    "journalism": "^1.7.0",
+    "simple-data-analysis": "^2.22.1-rc.0"
   }
 }

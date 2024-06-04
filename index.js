@@ -1,23 +1,24 @@
-import { SimpleNodeDB } from "simple-data-analysis";
+import { SimpleDB } from "simple-data-analysis";
 import { prettyDuration } from "journalism";
 
 const start = new Date();
 
-const sdb = new SimpleNodeDB();
+const sdb = new SimpleDB();
+const table = sdb.newTable();
 
-await sdb.loadData("data", "./measurements.txt", {
+await table.loadData("./measurements.txt", {
   fileType: "csv",
   header: false,
 });
-await sdb.renameColumns("data", { column0: "city", column1: "temp" });
-await sdb.logTable("data");
+await table.renameColumns({ column0: "city", column1: "temp" });
+await table.logTable();
 
-await sdb.summarize("data", {
+await table.summarize({
   values: "temp",
   categories: "city",
   summaries: ["min", "mean", "max"],
   decimals: 1,
 });
-await sdb.logTable("data");
+await table.logTable();
 
-console.log("Finished in " + prettyDuration(start, new Date()));
+prettyDuration(start, { log: true, prefix: "Done in " });
