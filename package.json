@@ -2,6 +2,6 @@
   "type": "module",
   "dependencies": {
     "journalism": "^1.7.0",
-    "simple-data-analysis": "^2.22.1-rc.0"
+    "simple-data-analysis": "^3.0.0"
   }
 }
